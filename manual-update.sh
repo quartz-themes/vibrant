@@ -307,7 +307,7 @@ declare -a themes=(
   "sparkling-wisdom"
   "spectrum"
   "spectrum-blue"
-  "sperctrumplus"
+  "spectrumplus"
   "spring"
   "sqdthone"
   "strict"
