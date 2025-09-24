@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Just in case
 
-declare -a small=("testing-environment")
+declare -a small=("blood-rush")
 
 declare -a themes=(
   "80s-neon"
@@ -27,13 +27,17 @@ declare -a themes=(
   "aurora"
   "aurora-twilight"
   "autotape"
+  "avatar"
   "ayu-light-mirage"
   "ayu-mirage"
+  "azure"
   "base2tone"
+  "baseline"
   "behave-dark"
   "big-bold"
   "black"
   "blackbird"
+  "blood-rush"
   "blossom"
   "blue-topaz"
   "bolt"
@@ -54,6 +58,7 @@ declare -a themes=(
   "christmas"
   "cobalt-peacock"
   "cocoa"
+  "coffee"
   "colored-candy"
   "comfort"
   "comfort-color-dark"
@@ -105,6 +110,7 @@ declare -a themes=(
   "everblush"
   "everforest"
   "everforest-enchanted"
+  "everforest-spruce"
   "evergreen-shadow"
   "evilred"
   "faded"
@@ -112,6 +118,7 @@ declare -a themes=(
   "fastppuccin"
   "feather"
   "firefly"
+  "flatcap"
   "flexcyon"
   "flexoki"
   "flexoki-warm"
@@ -141,6 +148,7 @@ declare -a themes=(
   "improved-potato"
   "ink"
   "ion"
+  "iridium"
   "its-theme"
   "jotter"
   "kakano"
@@ -168,6 +176,7 @@ declare -a themes=(
   "material-flat"
   "material-gruvbox"
   "material-ocean"
+  "matrix"
   "meridian"
   "micro-mike"
   "midnight"
@@ -188,6 +197,7 @@ declare -a themes=(
   "monokai"
   "moonlight"
   "mulled-wine"
+  "mushin"
   "muted-blue"
   "myst"
   "nebula"
@@ -201,8 +211,13 @@ declare -a themes=(
   "nightfox"
   "nightingale"
   "nobb"
+  "noctilux"
+  "noctis"
+  "nord"
   "nordic"
   "northern-sky"
+  "nostromo"
+  "nota-limonada-light"
   "notation"
   "notation-2"
   "notswift"
@@ -220,12 +235,14 @@ declare -a themes=(
   "oldsidian-purple"
   "oledblack"
   "oliviers-theme"
+  "omega"
   "onenice"
   "ono-sendai"
   "orange"
   "oreo"
   "origami"
   "origin"
+  "osaka-jade"
   "overcast"
   "pale"
   "panic-mode"
@@ -243,6 +260,7 @@ declare -a themes=(
   "polka"
   "pomme-notes"
   "powered-by-lancer"
+  "powered-by-lancer-retouched"
   "primary"
   "prime"
   "prism"
@@ -256,11 +274,15 @@ declare -a themes=(
   "pxld"
   "qlean"
   "quillcode"
+  "radiance"
+  "ravenloft"
   "red-graphite"
   "red-shadow"
+  "redshift-oled-blue-light-filter"
   "refined-default"
   "reshi"
   "retro-windows"
+  "retroma"
   "retronotes"
   "retroos-98"
   "reverie"
@@ -268,6 +290,7 @@ declare -a themes=(
   "ribbons"
   "rift"
   "rmaki"
+  "robsi"
   "rose-pine"
   "rose-pine-2"
   "rose-pine-moon"
@@ -324,6 +347,7 @@ declare -a themes=(
   "things-3"
   "tiniri"
   "tokyo-night"
+  "tokyo-night-simple"
   "tokyo-night-storm"
   "tomorrow"
   "tomorrow-night-bright"
@@ -342,9 +366,11 @@ declare -a themes=(
   "vanilla-amoled-color"
   "vanilla-palettes"
   "vauxhall"
+  "velocity"
   "velvet-moon"
   "venom"
   "vercel-geist"
+  "vesnea-vibe"
   "vesper"
   "vibrant"
   "vicious"
@@ -365,6 +391,7 @@ declare -a themes=(
   "zario"
   "zen"
   "zenburn"
+
 )
 
 cd ..
@@ -391,10 +418,10 @@ for i in "${themes[@]}"; do
   git commit -a -m "Updated to latest template."
 
   # replace pageTitle: "Quartz 4", with pageTitle: "${i}", in `quartz.config.ts`
-  # sed -i -e 's|pageTitle: "Quartz 4"|pageTitle: "'${i}'"|' quartz.config.ts
+  sed -i -e 's|pageTitle: "Quartz 4"|pageTitle: "'${i}'"|' quartz.config.ts
 
   # replace baseUrl: "quartz.jzhao.xyz", with baseUrl: "quartz-themes.github.io/${i}", in `quartz.config.ts`
-  # sed -i -e 's|baseUrl: "quartz.jzhao.xyz"|baseUrl: "quartz-themes.github.io/'${i}'"|' quartz.config.ts
+  sed -i -e 's|baseUrl: "quartz.jzhao.xyz"|baseUrl: "quartz-themes.github.io/'${i}'"|' quartz.config.ts
 
   # replace ---.*?Quartz is a fast, with ---\n\nQuartz is a fase, in `docs/index.md` using perl
   # perl -0777 -i -pe 's/\n---.*?Quartz is a fast/\n---\n\nQuartz is a fast/' docs/index.md
