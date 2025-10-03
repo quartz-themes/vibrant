@@ -52,6 +52,8 @@ declare -a themes=(
   "carbon"
   "cardstock"
   "catppuccin"
+  "catppuccin.frappe"
+  "catppuccin.macchiato"
   "celestial-night"
   "charcoal"
   "chiaroscuroflow"
